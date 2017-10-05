@@ -1,0 +1,6 @@
+---
+- name: run all
+  hosts: hosts
+  gather_facts: yes
+- include: jenkinsImage.yml
+  include: nexusImage.yml

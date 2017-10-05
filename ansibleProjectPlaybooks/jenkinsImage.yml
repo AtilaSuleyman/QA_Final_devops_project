@@ -1,0 +1,14 @@
+---
+- name: pull and run jenkins image
+  hosts: hosts
+  remote_user: vagrant
+  become: true
+
+  tasks:
+  - name: get and run jenkins container
+    docker_container:
+      name: jenkinsContainer
+      state: started
+      image: jenkins
+      ports:
+        - "49002:8080"              
