@@ -1,0 +1,2 @@
+[hosts]
+34.250.175.227  ansible_connection=ssh ansible_ssh_user=ubuntu
