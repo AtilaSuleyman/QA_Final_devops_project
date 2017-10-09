@@ -1,0 +1,51 @@
+---
+
+- name: install 
+  hosts: hosts
+  remote_user: vagrant
+  become: yes
+  tasks:
+
+  - name: install pip
+    apt: name=python-pip state=present
+ 
+  - name: install docker py
+    pip: name=docker-py state=present 
+
+  - name: get update
+    apt: update_cache=yes 
+
+  - name: get curl
+    apt: name=curl state=present
+
+  - name: add GPG key for Docker repo
+    shell: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
+    
+  - name: add Docker repo
+    shell: 'sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
+
+  - name: get update
+    apt: update_cache=yes
+
+  - name: check
+    shell: "apt-cache policy docker-ce"
+
+  - name: install docker
+    apt: name=docker-ce state=present
+
+  - name: get and run jenkins container
+    docker_container:
+      name: jenkinsContainer
+      state: started
+      image: jenkins
+      ports:
+        - "49002:8080"      
+
+  - name: get and run nexus container
+    docker_container:
+      name: nexusContainer
+      state: started
+      image: sonatype/nexus
+      ports:
+        - "50000:8081"
+        
