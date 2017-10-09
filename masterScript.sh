@@ -13,7 +13,7 @@ apt-get -y update
 
 
 ##ssh code goes here
-umask 077; UbuntuKeyTwo.pem -d ~/.ssh || mkdir ~/.ssh ; cat >> ~/.ssh/authorized_keys
+umask 077; ~/UbuntuKeyTwo.pem -d ~/.ssh || mkdir ~/.ssh ; cat >> ~/.ssh/authorized_keys
 
 
 cd /etc/ansible
