@@ -17,6 +17,7 @@ umask 077; ~/UbuntuKeyTwo.pem -d ~/.ssh || mkdir ~/.ssh ; cat >> ~/.ssh/authoriz
 
 
 cd /etc/ansible
+sudo rm /etc/ansible/hosts
 
 ##wget resources code
 sudo wget  https://github.com/simonydbutt/QA_Final_Devops_Project/blob/master/hosts
