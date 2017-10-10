@@ -23,8 +23,8 @@ cd ansible
 sudo rm /etc/ansible/hosts
 
 ##wget resources code
-sudo wget  https://github.com/simonydbutt/QA_Final_Devops_Project/blob/master/hosts
-sudo wget https://github.com/simonydbutt/QA_Final_Devops_Project/blob/master/playbook.yml
+sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/master/hosts
+sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/master/playbook.yml
 
 #execute playbook
 sudo ansible-playbook playbook.yml
