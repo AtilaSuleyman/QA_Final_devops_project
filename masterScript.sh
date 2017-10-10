@@ -16,7 +16,10 @@ sudo apt-get -y update
 umask 077; ~/UbuntuKeyTwo.pem -d ~/.ssh || mkdir ~/.ssh ; cat >> ~/.ssh/authorized_keys
 
 
-cd /etc/ansible
+cd /etc
+sudo mkdir ansible
+cd ansible
+
 sudo rm /etc/ansible/hosts
 
 ##wget resources code
