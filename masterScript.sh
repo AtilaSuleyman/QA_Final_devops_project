@@ -5,7 +5,9 @@
 sudo apt-get -y install python-pip
 #sudo pip install --upgrade pip
 #sudo pip install  ansible
-sudo apt -y install ansible
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update
+sudo apt install -y ansible
 sudo apt-get -y update
 
 #download wget
