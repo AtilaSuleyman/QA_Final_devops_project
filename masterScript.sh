@@ -9,6 +9,8 @@ sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt-get update
 sudo apt install -y ansible
 sudo apt-get -y update
+sudo chmod 777 /etc/ansible/ansible.cfg
+echo 'host_key_checking = False' >> /etc/ansible/ansible.cfg
 
 #download wget
 sudo apt-get -y install wget 
@@ -16,7 +18,7 @@ sudo apt-get -y update
 
 
 ##ssh code goes here
-cat /home/ubuntu/UbuntuKeyTwo.pem >> ~/.ssh/authorized_key
+cat /home/ubuntu/UbuntuKeyTwo.pem >> ~/.ssh/authorized_keys
 cat /home/ubuntu/UbuntuKeyTwo.pem >> ~/.ssh/known_hosts
 
 cd /etc
