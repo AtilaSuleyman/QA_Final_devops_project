@@ -3,12 +3,13 @@
 #switch to root and download ansible through python pip
 
 sudo apt-get install -y python-pip
-sudo pip install --upgrade pip
-sudo pip install  ansible
-sudo apt-get update -y
+#sudo pip install --upgrade pip
+#sudo pip install  ansible
+sudo apt-get -y install ansible
+sudo apt-get -y update
 
 #download wget
-sudo apt-get install wget -y
+sudo apt-get -y install wget 
 sudo apt-get -y update
 
 
