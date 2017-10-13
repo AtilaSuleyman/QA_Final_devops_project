@@ -19,7 +19,7 @@ sudo apt-get -y update
 
 ##ssh code goes here
 cat /home/ubuntu/UbuntuKeyTwo.pem >> ~/.ssh/authorized_keys
-cat /home/ubuntu/UbuntuKeyTwo.pem >> ~/.ssh/known_hosts
+sudo chmod 400 /home/ubuntu/UbuntuKeyTwo.pem
 
 cd /etc
 sudo mkdir ansible
