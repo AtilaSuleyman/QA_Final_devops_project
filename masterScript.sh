@@ -29,7 +29,7 @@ sudo rm /etc/ansible/hosts
 
 ##wget resources code
 sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/master/ansible.cfg
-cat /home/ubuntu/ansible.cfg > /etc/ansible/ansible.cfg
+cat /etc/ansible/ansible.cfg.1 > /etc/ansible/ansible.cfg
 sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/master/hosts
 sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/master/playbook.yml
 
