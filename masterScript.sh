@@ -34,5 +34,5 @@ sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/
 sudo wget https://raw.githubusercontent.com/simonydbutt/QA_Final_Devops_Project/master/playbook.yml
 
 #execute playbook
-#sudo ansible-playbook playbook.yml
+sudo ansible-playbook playbook.yml
 
